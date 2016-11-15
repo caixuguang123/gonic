@@ -14,7 +14,6 @@ func main() {
 
 	initializeRoutes()
 	//router.GET("/", showIndexPage)
-      dsadad
 	router.Run()
 }
 
