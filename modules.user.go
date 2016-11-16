@@ -12,8 +12,8 @@ type user struct {
 
 var userList = []user{
 	{1, "u1", "p1"},
-	{2, "p2", "p2"},
-	{3, "p3", "p3"},
+	{2, "u2", "p2"},
+	{3, "u3", "p3"},
 }
 
 func registerUser(userName string, password string) (*user, error) {

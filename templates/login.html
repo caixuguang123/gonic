@@ -1,0 +1,35 @@
+{{template "header.html"}}
+
+<h1>Login</h1>
+
+<div class="panel panel-default col-sm-6">
+    <div class="panel-body">
+        {{if .errTitle}}
+        <p class="bg-danger">
+            {{.errTitle}}:{{.errMessage}}
+        </p>
+        {{end}}
+
+
+        <form class="form" action="/u/login" method="post">
+            <div class="form-group">
+                <label for="userName">UserName</label>
+                <input type="text" placeholder="userName" name="account" id="userName">
+            </div>
+
+            <div class="form-group">
+                <label for="password">PassWord</label>
+                <input id="password" name="psw" placeholder="passWord" type="password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">login</button>
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+{{template "footer.html" .}}
