@@ -6,7 +6,6 @@ import (
 )
 
 var router *gin.Engine
-sdadsadadad:
 func main() {
 	router = gin.Default()
 
