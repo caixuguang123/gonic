@@ -24,7 +24,8 @@ func registerUser(userName string, password string) (*user, error) {
 		return nil, errors.New("pwd can't be empty")
 	}
 	id := len(userList) - 1;
-	var user = user{id, userName, password}
+	user := user{id, userName, password}
+	store(&user)
 	userList = append(userList, user)
 	return &user, nil
 }
