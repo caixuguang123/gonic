@@ -14,6 +14,10 @@ func showIndexPage(c *gin.Context) {
 	}, "index.html")
 }
 
+func RgetAllArticles(c *gin.Context)  {
+
+}
+
 func getArticle(c *gin.Context) {
 	if articleID, err := strconv.Atoi(c.Param("article_id")); err == nil {
 		if article, err := getArticleById(articleID); err == nil {
