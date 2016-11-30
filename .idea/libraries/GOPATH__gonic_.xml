@@ -1,21 +1,17 @@
 <component name="libraryTable">
   <library name="GOPATH &lt;gonic&gt;">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../../goPJ" />
-      <root url="file://$PROJECT_DIR$/../../go-gin-app" />
-      <root url="file://$PROJECT_DIR$/../../qiniupkg.com" />
-      <root url="file://$PROJECT_DIR$/../../golang.org" />
-      <root url="file://$PROJECT_DIR$/.." />
-      <root url="file://$PROJECT_DIR$/../../gopkg.in" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/gopkg.in" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/golang.org" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/github.com" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/qiniupkg.com" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="file://$PROJECT_DIR$/../../goPJ" />
-      <root url="file://$PROJECT_DIR$/../../go-gin-app" />
-      <root url="file://$PROJECT_DIR$/../../qiniupkg.com" />
-      <root url="file://$PROJECT_DIR$/../../golang.org" />
-      <root url="file://$PROJECT_DIR$/.." />
-      <root url="file://$PROJECT_DIR$/../../gopkg.in" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/gopkg.in" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/golang.org" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/github.com" />
+      <root url="file://$USER_HOME$/Desktop/gonic/src/qiniupkg.com" />
     </SOURCES>
     <excluded>
       <root url="file://$PROJECT_DIR$" />
