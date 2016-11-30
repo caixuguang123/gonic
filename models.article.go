@@ -1,6 +1,6 @@
 package main
 
-import "qiniupkg.com/x/errors.v7"
+import "errors"
 
 type article struct {
 	ID      int `json:"id"`
