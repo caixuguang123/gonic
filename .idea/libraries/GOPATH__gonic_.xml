@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="GOPATH &lt;gonic&gt;">
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../app" />
       <root url="file://$PROJECT_DIR$/../../goPJ" />
-      <root url="file://$PROJECT_DIR$/../../gonic" />
       <root url="file://$PROJECT_DIR$/../../go-gin-app" />
       <root url="file://$PROJECT_DIR$/../../qiniupkg.com" />
       <root url="file://$PROJECT_DIR$/../../golang.org" />
@@ -11,8 +11,8 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../app" />
       <root url="file://$PROJECT_DIR$/../../goPJ" />
-      <root url="file://$PROJECT_DIR$/../../gonic" />
       <root url="file://$PROJECT_DIR$/../../go-gin-app" />
       <root url="file://$PROJECT_DIR$/../../qiniupkg.com" />
       <root url="file://$PROJECT_DIR$/../../golang.org" />
