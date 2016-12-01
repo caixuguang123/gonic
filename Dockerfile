@@ -15,3 +15,4 @@ RUN go get gopkg.in/mgo.v2/bson
 RUN go build -o app
 
 ENTRYPOINT ["/app/gonic/app"]
+
