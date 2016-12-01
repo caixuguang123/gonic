@@ -11,7 +11,7 @@ type user struct {
 
 
 func registerUser(userName string, password string) (*user, error) {
-	if !isUserNameAvailable(userName) {
+	if isUserNameAvailable(userName) {
 		return nil, errors.New("user dumplicate")
 	}
 	if password == "" {
