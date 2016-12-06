@@ -6,7 +6,7 @@ import (
 
 const URL = "mongodb://10.86.5.230"
 
-type mgoCollection func(*mgo.Session) error
+type mgoCollection func(*mgo.Collection) error
 
 var (
 	mgoSession *mgo.Session
@@ -32,7 +32,7 @@ func WitchCollection(collection string, mc mgoCollection) error {
 }
 
 func Add(collection string, obj interface{}) bool {
-	query := func(c *mgo.Collection) {
+	query := func(c *mgo.Collection) error{
 		return c.Insert(obj)
 	}
 
@@ -45,7 +45,7 @@ func Add(collection string, obj interface{}) bool {
 }
 
 func Delete(collection string, obj interface{}) bool {
-	query := func(c *mgo.Collection) {
+	query := func(c *mgo.Collection) error{
 		return c.Remove(obj)
 	}
 

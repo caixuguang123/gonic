@@ -8,7 +8,7 @@ import (
 func main() {
 	Router = gin.Default()
 
-	Router.LoadHTMLGlob("templates/*")
+	Router.LoadHTMLGlob("../templates/*")
 
 	InitializeRoutes()
 	//router.GET("/", showIndexPage)

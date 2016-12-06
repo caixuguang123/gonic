@@ -5,35 +5,36 @@ import (
 	"gopkg.in/mgo.v2/bson"
 	"github.com/gonic/db"
 	"gopkg.in/mgo.v2"
+	"fmt"
 )
 
 type User struct {
-	ID       int `json:"id"`
-	UserName string `json:"user_name"`
-	Password string `json:"password"`
+	ID       bson.ObjectId `json:"id" bson:"id"`
+	UserName string `json:"user_name" bson:"userName"`
+	Password string `json:"password" bson:"passWord"`
 }
 
 func RegisterUser(userName string, password string) (*User, error) {
-	if IsUserNameAvailable(userName) {
+	if !IsUserNameAvailable(userName)  {
 		return nil, errors.New("user dumplicate")
 	}
 	if password == "" {
 		return nil, errors.New("pwd can't be empty")
 	}
 	id := bson.NewObjectId();
+	fmt.Print(id.Hex())
 	var user = User{id, userName, password}
 	db.Add("user", user)
 	return &user, nil
 }
 
 func IsUserNameAvailable(userName string) bool {
-	//return GetbyName(userName)
-	var user User
+	var user []User
 	query := func(c *mgo.Collection) error {
-		return c.Find(bson.M{"name":userName}).One(&user)
+		return c.Find(bson.M{"userName":userName}).All(&user)
 	}
 
-	error := db.WitchCollection("user", query())
+	error := db.WitchCollection("user", query)
 	if error != nil {
 		return false
 	}
@@ -44,6 +45,16 @@ func IsUserNameAvailable(userName string) bool {
 }
 
 func IsUserValid(userName, password string) bool {
-	//return GetbyUser(userName,password)
+	var user[]User
+	query := func(c *mgo.Collection) error{
+		return c.Find(bson.M{"userName":userName}).All(&user)
+	}
+	error := db.WitchCollection("user", query)
+	if error != nil {
+		return false
+	}
+	if user != nil && user[0].Password == password {
+		return true
+	}
 	return false
 }
