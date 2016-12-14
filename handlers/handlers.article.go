@@ -3,7 +3,6 @@ package handlers
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"strconv"
 	. "github.com/gonic/models"
 	. "github.com/gonic/render"
 )
@@ -17,7 +16,7 @@ func ShowIndexPage(c *gin.Context) {
 }
 
 func GetArticle(c *gin.Context) {
-	if articleID, err := strconv.Atoi(c.Param("article_id")); err == nil {
+	if articleID := c.Param("article_id"); articleID != "" {
 		if article, err := GetArticleById(articleID); err == nil {
 			c.HTML(
 				http.StatusOK,
